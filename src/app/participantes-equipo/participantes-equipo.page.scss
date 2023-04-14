@@ -1,0 +1,96 @@
+ion-headder{
+    --background: rgb(185, 207, 255);
+}
+
+ion-toolbar{
+    --background: rgb(185, 207, 255);
+    color: black;
+}
+
+ion-content{
+    --background: rgb(185, 207, 255);
+}
+
+.todo {
+    padding-top: 10px;
+    margin-left: 10px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+h3{
+    color: black;
+    margin-left: 15px;
+}
+
+#participante{
+    width: 80%;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 10%;
+    color: black;
+    background-color: lightcyan;
+}
+
+ion-card-title{
+    color: black;
+    text-align: center;
+}
+
+#card{
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    width: 88%;
+    border-radius: 15px;
+    background-color: lightcyan;
+}
+
+ion-label{
+    font-size: 17px;
+    color: black;
+}
+
+ion-input{
+    border: solid black 3px;
+    border-radius: 12px;
+    background-color: white;
+    --padding-start: 8px;
+}
+
+#select{
+    margin-top: 10px;
+    border: solid black 3px;
+    border-radius: 12px;
+    background-color: white;
+    --padding-start: 8px;
+}
+
+#botones {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: -20%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#boton{
+    border-radius: 23px;
+    color: blue;
+    margin-bottom: 12px;
+}
+
+#boton2{
+    border-radius: 23px;
+    margin-top: 10px;
+    color: red;
+    margin-bottom: 12px;
+}

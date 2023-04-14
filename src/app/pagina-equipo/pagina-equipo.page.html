@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverHome()" color="light">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-title>{{document.data.nombre}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card">
+    <div id="logo">
+      <img src="../../assets/img/perfil.png" id="foto">
+      <input type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" id="inputFoto">
+      <div class="overlay">
+        <div class="text">
+          <label for="inputFoto">
+          <ion-icon name="camera-reverse"></ion-icon>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div id="texto">
+      <p><b>Deporte Realizado:</b>&nbsp;{{document.data.tipo}}</p>
+    <p><b>Rol en el equipo:</b>&nbsp;{{document.data.rol}}</p>
+    <p><b>Codigo del Equipo:</b>&nbsp;<br>
+      <ion-button fill="clear" (click)="copiarCodigo()"  id="copiar">
+        {{document.data.codigoEquipo}}
+      </ion-button></p>
+    <!-- <ion-button fill="clear" (click)="copiarCodigo()">
+      <ion-icon name="copy-outline"></ion-icon>
+    </ion-button> -->
+    <p><b>Categoría:</b>&nbsp;{{document.data.categoria}}</p>
+    <p><b>Descripcion:</b>&nbsp;{{document.data.descripcion}}</p>
+    <p><b>Liga:</b>&nbsp;{{document.data.liga}}</p>
+    <p><b>Ciudad:</b>&nbsp;{{document.data.ciudad}}</p>
+    </div>
+    <div id="botones">
+      <ion-button fill="clear" id="button" (click)="partidos()">Partidos</ion-button>
+      <br>
+      <ion-button fill="clear" id="button" (click)="entrenamientos()">Entrenamientos</ion-button>
+      <br>
+      <ion-button fill="clear" id="button" (click)="irseEquipo()">Salirse del equipo</ion-button>
+      <br>
+      <ion-button fill="clear" id="button" (click)="verParticipantes()">Ver participantes</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

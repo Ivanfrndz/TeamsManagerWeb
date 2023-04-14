@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverPartido()"><ion-icon name="arrow-back-outline" color="light"></ion-icon></ion-button>
+      <ion-title>{{entreno}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card">
+    <ion-label>Puntos de {{document2.data.nombre}}: </ion-label>
+    <ion-input type="number" [(ngModel)]="golesEquipo"></ion-input>
+    <ion-label>Puntos de {{document.data.rival}}: </ion-label>
+    <ion-input type="number" [(ngModel)]="golesRival"></ion-input>
+    <ion-label>Resumen del partido: </ion-label>
+    <ion-input type="textarea" [(ngModel)]="resumen"></ion-input>
+    <p>{{mensaje}}</p>
+  </ion-card>
+  <div id="botones">
+    <ion-button (click)="finalizar(resumen, golesEquipo, golesRival)" id="boton" fill="clear">Guardar Cambios</ion-button>
+  </div>
+</ion-content>

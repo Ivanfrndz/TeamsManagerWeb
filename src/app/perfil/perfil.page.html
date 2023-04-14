@@ -1,0 +1,34 @@
+<ion-content>
+  <div id="todo">
+    <ion-card id="card">
+      <div id="logo">
+        <img src="{{foto}}" id="foto">
+        <input type="file" accept=".png, .jpg, .jpeg" (change)="cargarImagen($event)" id="inputFoto">
+        <div class="overlay">
+          <div class="text">
+            <label for="inputFoto">
+            <ion-icon name="camera-reverse"></ion-icon>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div id="informacion">
+        <p id="etiqueta"><b>Usuario:</b></p> 
+        <p id="info">{{usuario}}</p>
+        <p id="etiqueta"><b>Nombre:</b></p>
+        <p id="info">{{nombre}}</p>
+        <p id="etiqueta"><b>Apellidos:</b></p>
+        <p id="info">{{apellidos}}</p>
+        <p id="etiqueta"><b>Correo:</b></p>
+        <p id="info">{{correo}}</p>
+      </div>
+      <div id="botones">
+        <ion-button fill="clear" (click)="actualizarPerfil()" id="opcion">Actualizar Perfil</ion-button>
+        <ion-button fill="clear" (click)="cerrarSesion()" id="opcion">Cerrar Sesión</ion-button>
+        <ion-button fill="clear" (click)="volverHome()" id="opcion">Volver al Home</ion-button>
+      </div>
+    </ion-card>
+    
+    
+  </div>
+</ion-content>

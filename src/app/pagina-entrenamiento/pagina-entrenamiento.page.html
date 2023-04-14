@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverPartido()"><ion-icon name="arrow-back-outline" color="light"></ion-icon></ion-button>
+      <ion-title>Entrenamientos</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button disabled="{{boton}}" (click)="anadirEntrenamiento()" fill="clear" color="light"><ion-icon name="add"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+  <div id="todo">
+    <ion-card id="card" *ngFor="let entrenamiento of arrayEntrenamientos" (click)="ver(entrenamiento.data.codigo)">
+      <ion-card-header>
+        <ion-card-title>{{entrenamiento.data.codigo}} </ion-card-title>
+        <ion-card-subtitle> Fecha: <b>{{entrenamiento.data.fechaConvocatoria}}</b></ion-card-subtitle>
+        <ion-card-subtitle> Direccion: <b>{{entrenamiento.data.direccion}}</b></ion-card-subtitle>
+        <ion-card-subtitle> Hora Convocatoria: <b>{{entrenamiento.data.horaConvocatoria}}</b></ion-card-subtitle>
+        <ion-card-subtitle> Finalizado: <b>{{entrenamiento.data.finalizado}}</b></ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

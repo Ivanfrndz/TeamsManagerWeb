@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volver()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-title>{{entreno}}</ion-title>
+    </ion-buttons>   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="todo">
+    <p>Direccion del entrenamiento: {{document.data.direccion}}</p>
+    <p>Hora Convocatoria: {{document.data.horaConvocatoria}}</p>
+    <p>Hora del comienzo del entrenamiento: {{document.data.horaComienzo}}</p>
+    <p>Hora del final del entrenamiento (aprox): {{document.data.horaFin}}</p>
+    <p>Entrenamiento: {{document.data.finalizado}}</p>
+    <div id="botones">
+      <ion-button disabled="{{boton2}}" (click)="firmarConvocatoria(document.data.fechaConvocatoria)" id="boton" fill="clear">Firmar Convocatoria</ion-button>
+    </div>
+    <h1><b>Resumen Del Entrenamiento</b></h1>
+      <ion-card id="card">
+        <ion-card-content>
+          {{document.data.resumen}}
+        </ion-card-content>
+      </ion-card>
+    <h1><b>Asistentes</b></h1>
+    <ion-card *ngFor="let convocados of arrayConvocados" id="card">
+      <ion-card-header>
+        <ion-card-title>{{convocados.data.nombre}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button disabled="{{boton}}" (click)="borrar(convocados.data.nombre)" fill="clear" id="boton">No ha asistido</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <div id="botones">
+      <ion-button disabled="{{boton}}" (click)="finalizar(document.data.fechaConvocatoria)" fill="clear" id="boton"> {{mensaje2}} </ion-button>
+    </div>
+  </div>
+
+
+</ion-content>

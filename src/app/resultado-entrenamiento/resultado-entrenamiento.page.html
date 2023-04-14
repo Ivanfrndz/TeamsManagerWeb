@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverPartido()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-title>{{entreno}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card">
+    Resumen del entrenamiento:
+    <ion-input type="textarea" [(ngModel)]="resumen"></ion-input>
+    <br>
+    {{mensaje}}
+    <br>
+  </ion-card>
+  <div id="botones">
+    <ion-button (click)="finalizar(resumen)"fill="clear" id="boton">Guardar Cambios</ion-button>
+  </div>
+</ion-content>

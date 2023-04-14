@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cambiar-usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Modificar Usuario</h3>
+  <ion-label>Usuario Antiguo:</ion-label>
+    <ion-input type="text" [(ngModel)]="antiguo"></ion-input>
+  <ion-label>Usuario Nuevo:</ion-label>
+    <ion-input type="text" [(ngModel)]="nuevo"></ion-input>
+  <ion-button (click)="actualizar()">Actualizar</ion-button>
+  <br>
+  <br>
+  <ion-button (click)="volverHome()">Volver a Perfil</ion-button>
+  <p>{{mensaje}}</p>
+</ion-content>

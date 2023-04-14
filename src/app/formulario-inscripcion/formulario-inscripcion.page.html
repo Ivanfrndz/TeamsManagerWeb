@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="home()" color="light"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-title>Formulario {{tipo}}</ion-title>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="todo">
+  <ion-card id="card">
+    <ion-label>Nombre del equipo:</ion-label>
+    <ion-input [(ngModel)]="equipoEditando.nombre" type="text"></ion-input>
+    <ion-label>Descripcion del equipo:</ion-label>
+    <ion-input [(ngModel)]="equipoEditando.descripcion" type="text"></ion-input>
+    <ion-label>Categoría del equipo:</ion-label>
+    <ion-input placeholder="Ej: Cadete A" [(ngModel)]="equipoEditando.categoria" type="text"></ion-input>
+    <ion-label>Liga del equipo:</ion-label>
+    <ion-input placeholder="Ej: Primera división autonomica Cadete" [(ngModel)]="equipoEditando.liga" type="text"></ion-input>
+    <ion-label>Ciudad del equipo:</ion-label>
+    <ion-input [(ngModel)]="equipoEditando.ciudad" type="text"></ion-input>
+    <p>{{mensaje}}</p>
+    <div id="botones">
+      <ion-button fill="clear" (click)="crear()" id="boton">Crear equipo</ion-button>
+    </div>
+  </ion-card> 
+</div>
+</ion-content>

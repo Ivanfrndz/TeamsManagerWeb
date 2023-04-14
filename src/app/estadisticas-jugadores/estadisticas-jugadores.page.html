@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverParticipantes()"><ion-icon name="arrow-back-outline" color="light"></ion-icon></ion-button>
+      <ion-title>{{document2.data.usuario}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card">
+    <p><b>Nombre:</b>&nbsp;{{document2.data.nombre}}&nbsp;{{document2.data.apellidos}}</p>
+    <p><b>Partidos Jugados:</b>&nbsp;{{document.data.jugados}}</p>
+    <p><b>Partidos de Titular:</b>&nbsp;{{document.data.titular}}</p>
+    <p><b>Partidos Convocado:</b>&nbsp;{{document.data.convocados}}</p>
+    <p><b>Asistencias:</b>&nbsp;{{document.data.asistencias}}</p>
+    <p><b>Goles:</b>&nbsp;{{document.data.goles}}</p>
+    <p><b>Minutos Jugados:</b>&nbsp;{{document.data.minutos_jugados}}</p>
+  </ion-card>
+</ion-content>

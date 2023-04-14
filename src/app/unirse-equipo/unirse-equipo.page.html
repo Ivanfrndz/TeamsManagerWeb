@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="home()"><ion-icon name="arrow-back-outline" color="light"></ion-icon></ion-button>
+      <ion-title>Unirse</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div> 
+    <ion-card id="card">
+      <ion-label>
+        Pon el código del equipo:
+      </ion-label><br>
+      <ion-input [(ngModel)]="codigoEquipito" type="text"></ion-input>
+      <ion-select placeholder="Elije el rol a desempeñar en el equipo:" #rol (ionChange)='roles($event)' id="select">
+        <ion-select-option value="Jugador">Jugador</ion-select-option>
+        <ion-select-option value="director deportivo">Director Deportivo</ion-select-option>
+      </ion-select>
+      <p>{{mensaje}}</p>
+      <div id="botones">
+        <ion-button (click)="Unirse()" fill="clear" id="boton">Unirse</ion-button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

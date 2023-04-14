@@ -1,0 +1,40 @@
+<!-- Lista desplegable deshabilitada para el boton crear un equipo -->
+<ion-item [hidden]='hideList' disabled id="selectDeporte">
+  <ion-label>Elije un deporte</ion-label>
+  <ion-select placeholder="deporte" #deportes (ionChange)='tipos($event)'>
+<ion-select-option value="Fútbol">Fútbol</ion-select-option>
+<ion-select-option value="Baloncesto">Baloncesto</ion-select-option>
+<ion-select-option value="Balonmano">Balonmano</ion-select-option>
+<ion-select-option value="Valorant">Valorant</ion-select-option>
+<ion-select-option value="League of Legends">League of Legends</ion-select-option>
+<ion-select-option value="Counter Strike">Counter Strike</ion-select-option>
+  </ion-select>
+</ion-item>
+<!-- Ion content -->
+<ion-content [fullscreen]="true">
+<div class="encabezado">
+  <h1><b>TeamsManagers</b></h1>
+  <div id="boton1">
+    <ion-button fill="clear" (click)="perfil()" color="light" class="perfil">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>  
+</div>
+<div id="botones">
+  <ion-button fill="clear" (click)='crearEquipo()' class="botoncito"><b>Crear un equipo..</b></ion-button>
+  <ion-button fill="clear" (click)="unirseEquipo()" class="botoncito"><b>Unirse a un equipo..</b></ion-button>
+</div>
+<h3>LISTA DE EQUIPOS</h3>
+<ion-card (click)="irEquipo(equipo.data.codigoEquipo)" *ngFor="let equipo of arrayEquipos" id="card">
+  <ion-card-header>
+    <ion-card-title id="titulo"><b>{{equipo.data.nombre}}</b></ion-card-title>
+    <ion-card-subtitle color="secondary" id="deporte"><b>{{equipo.data.tipo}}</b></ion-card-subtitle>
+    <ion-card-subtitle color="tertiary" id="categoria">{{equipo.data.categoria}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    {{equipo.data.descripcion}}
+  </ion-card-content>
+</ion-card>
+
+<!--<ion-fab-button>Perfil</ion-fab-button> -->
+</ion-content>

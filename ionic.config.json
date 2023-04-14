@@ -1,0 +1,7 @@
+{
+  "name": "tfg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

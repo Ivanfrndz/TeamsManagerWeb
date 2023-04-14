@@ -1,0 +1,42 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="container_all" id="containerall" >
+    <div class="cover">
+
+            <div class="bg_color"></div>
+            <div class="wave w1"></div>
+            <div class="wave w2"></div>
+
+        <div class="containercover">
+            <div class="containerinfo">
+              <div id="logo">
+                <img src="../../assets/img/logo.png">
+              </div>
+                <!-- <ion-label><b>Usuario:</b></ion-label> -->
+                <ion-input type="text" [(ngModel)]="usuario" placeholder="Usuario">
+                  <button item-end class="btn_eye_icon" disabled>
+                    <ion-icon name="person"></ion-icon>
+                  </button>
+                </ion-input>
+                <!-- <ion-label><b>Contraseña:</b></ion-label> -->
+                <ion-input  #passwordEyeRegister  [type]="passwordTypeInput" [(ngModel)]="password" clearOnEdit="false" placeholder="Contraseña">
+                  <button item-end class="btn_eye_icon"  (click)="togglePasswordMode()">
+                    <ion-icon [name]="(passwordTypeInput === 'text')?'eye-off':'eye'"></ion-icon>
+                  </button>
+                </ion-input>
+                <p id="mensaje"><b>{{mensaje}}</b></p>
+              <div id="enlaces">
+                <a routerLink="/registro">Todavía no tengo cuenta</a>
+                <br>
+                <a routerLink="/recuperar">Se me ha olvidado la contraseña</a>
+              </div>
+              <div id="boton">
+                <ion-button fill="clear" (click)="consultar()">Iniciar Sesión</ion-button>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverPartido()" color="light" ><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-title>Crear Partido</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card">
+    <ion-label>Rival:</ion-label>
+    <ion-input [(ngModel)]="partidoEditando.rival" type="text"></ion-input>
+    <ion-label>Dirección:</ion-label>
+    <ion-input [(ngModel)]="partidoEditando.direccion" type="text"></ion-input>
+    <ion-label>Fecha del Entrenamiento:</ion-label>
+    <ion-input [(ngModel)]="partidoEditando.fechaConvocatoria" type="Date" format="DD-MM-YYYY"></ion-input>
+    <ion-label>Hora de la Convocatoria:</ion-label>
+    <ion-input [(ngModel)]="partidoEditando.horaConvocatoria" type="time"></ion-input>
+    <ion-label>Hora Comienzo del Partido:</ion-label>
+    <ion-input [(ngModel)]="partidoEditando.horaComienzo" type="time"></ion-input>
+    <ion-label>Hora Fin del Partido (aprox.):</ion-label>
+    <ion-input [(ngModel)]="partidoEditando.horaFin" type="time"></ion-input>
+    <div id="botones">
+      <ion-button (click)="anadir()" fill="clear" id="boton">Añadir Partido</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

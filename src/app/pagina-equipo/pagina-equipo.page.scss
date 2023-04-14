@@ -1,0 +1,95 @@
+ion-toolbar{
+    --background: rgb(185, 207, 255);
+    color: black;
+}
+
+ion-content{
+    --background: rgb(185, 207, 255);
+}
+
+#card{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 88%;
+    border-radius: 15px;
+    background-color: lightcyan;
+}
+
+#foto{
+    width: 80%;
+    height: 90%;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+}
+
+#inputFoto{
+    display: none;
+}
+
+#logo{
+    width: 70%;
+    height: 24%;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#logo:hover .overlay {
+    opacity: 1;
+  }
+
+.overlay {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 95%;
+    opacity: 0;
+    transition: .5s ease;
+    backdrop-filter: contrast(40%);
+    border-radius:  50%;
+  }
+
+#texto{
+    padding-left: 15px;
+}
+
+#copiar{
+    font-size: 13px; 
+    margin-left: -10px;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    color: gray;
+}
+
+#botones {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#button{
+    border: 3px solid black;
+    border-radius: 23px;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.text {
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }

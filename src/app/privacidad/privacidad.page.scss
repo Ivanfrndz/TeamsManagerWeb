@@ -1,0 +1,21 @@
+#contenido {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-direction: column;
+    background-color: lightcyan;
+    color: black;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+ion-button {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    border: 2px solid grey;
+    color: grey;
+    border-radius: 23px;
+}

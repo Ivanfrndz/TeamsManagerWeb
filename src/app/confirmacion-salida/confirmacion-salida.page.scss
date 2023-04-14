@@ -1,0 +1,41 @@
+ion-content{
+    display: flex;
+    --background: rgb(185, 207, 255);
+    flex-direction: column;
+    position: relative;
+}
+
+#container{
+    width: 100%;
+    margin-top: 40%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+p{
+    margin-bottom: 40px;
+}
+
+#botoncito {
+    --color: grey;
+    border: 3px solid grey;
+    border-radius: 23px;
+    width: 45%;
+  }
+#botoncito1 {
+    --color: grey;
+    border: 3px solid grey;
+    border-radius: 23px;
+    width: 45%;
+    margin-left: 5%;
+}

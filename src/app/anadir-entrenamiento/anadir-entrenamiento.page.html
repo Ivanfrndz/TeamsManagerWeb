@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="cancelar()"><ion-icon name="arrow-back-outline" color="light"></ion-icon></ion-button>
+      <ion-title>Crear Entrenamiento</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card">
+    <ion-label>Dirección:</ion-label>
+    <ion-input [(ngModel)]="entrenamientoEditando.direccion" type="text"></ion-input>
+    <ion-label>Fecha del Entrenamiento:</ion-label>
+    <ion-input [(ngModel)]="entrenamientoEditando.fechaConvocatoria" type="Date"></ion-input>
+    <ion-label>Hora de la Convocatoria:</ion-label>
+    <ion-input [(ngModel)]="entrenamientoEditando.horaConvocatoria" type="time"></ion-input>
+    <ion-label>Hora Comienzo del Entrenamiento:</ion-label>
+    <ion-input [(ngModel)]="entrenamientoEditando.horaComienzo" type="time"></ion-input>
+    <ion-label>Hora Fin del Entrenamiento (aprox.):</ion-label>
+    <ion-input [(ngModel)]="entrenamientoEditando.horaFin" type="time"></ion-input>
+    <div id="botones">
+      <ion-button (click)="anadir()" fill="clear" id="boton">Añadir Entrenamiento</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

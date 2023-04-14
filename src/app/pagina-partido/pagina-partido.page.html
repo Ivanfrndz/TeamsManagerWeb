@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverPartido()"><ion-icon name="arrow-back-outline" color="light"></ion-icon></ion-button>
+      <ion-title>Partidos</ion-title>
+    </ion-buttons>
+    <ion-buttons  slot="end">
+      <ion-button disabled="{{boton}}" (click)="anadirPartido()" fill="clear" color="light"><ion-icon name="add"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let partido of arrayPartidos" (click)="ver(partido.data.codigo)" id="card">
+    <ion-card-header>
+      <ion-card-title>{{partido.data.codigo}} </ion-card-title>
+      <ion-card-subtitle>Fecha del Partido: <b>{{partido.data.fechaConvocatoria}}</b></ion-card-subtitle>
+      <ion-card-subtitle>Dirección del partido: <b>{{partido.data.direccion}}</b></ion-card-subtitle>
+      <ion-card-subtitle>Hora de la convocatoria: <b>{{partido.data.horaConvocatoria}}</b></ion-card-subtitle>
+      <ion-card-subtitle>Partido Finalizado: <b>{{partido.data.finalizado}}</b></ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

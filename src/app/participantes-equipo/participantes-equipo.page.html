@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button (click)="volverPaginaEquipo()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-title>Participantes</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <div id="todo">
+    <h3>Cuerpo Técnico</h3>
+    <div *ngFor="let directivo of arrayCuerpoTecnico"  id="participante">
+      <spam><b> {{directivo.data.nombre}}</b></spam>
+      <div id="botones">
+        <ion-button (click)="estadisticasDirectivo(directivo.data.nombre)" id="boton" fill="clear"><ion-icon name="stats-chart"></ion-icon></ion-button>
+        <ion-button disabled="{{boton}}" (click)="eliminarDirectivo(directivo.data.nombre)" id="boton" fill="clear"><ion-icon name="trash" id="boton2"></ion-icon></ion-button>
+      </div>
+    </div>
+    <h3>Jugadores</h3>
+    <div *ngFor="let jugador of arrayJugadores"  id="participante">
+      <spam><b> {{jugador.data.nombre}}</b></spam>
+      <div id="botones">
+        <ion-button (click)="estadisticasJugador(jugador.data.nombre)" id="boton" fill="clear"><ion-icon name="stats-chart"></ion-icon></ion-button>
+        <ion-button disabled="{{boton}}" (click)="eliminarJugador(jugador.data.nombre)" id="boton" fill="clear"><ion-icon name="trash" id="boton2"></ion-icon></ion-button>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

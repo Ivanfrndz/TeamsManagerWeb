@@ -1,0 +1,61 @@
+<ion-content>
+  <div class="container_all" id="containerall">
+    <div class="cover">
+
+      <div class="bg_color"></div>
+      <div class="wave w1"></div>
+      <div class="wave w2"></div>
+
+      <div class="containercover">
+          <div class="containerinfo">
+            <div id="logo">
+              <img src="../../assets/img/logo.png">
+            </div>
+              <div id="todo">
+                <ion-input [(ngModel)]="usuarioEditando.nombre" id="input" placeholder="Nombre">
+                  <button item-end class="btn_eye_icon" disabled>
+                    <ion-icon name="person"></ion-icon>
+                  </button>
+                </ion-input>
+                <ion-input [(ngModel)]="usuarioEditando.apellidos" id="input" placeholder="Apellidos">
+                  <button item-end class="btn_eye_icon" disabled>
+                    <ion-icon name="person"></ion-icon>
+                  </button>
+                </ion-input>
+                <ion-input type="email" [(ngModel)]="usuarioEditando.correo" id="input" placeholder="Email">
+                  <button item-end class="btn_eye_icon" disabled>
+                    <ion-icon name="mail"></ion-icon>
+                  </button>
+                </ion-input>
+                <ion-input [(ngModel)]="usuarioEditando.usuario" [(ngModel)]="user" id="input" placeholder="Usuario">
+                  <button item-end class="btn_eye_icon" disabled>
+                    <ion-icon name="person"></ion-icon>
+                  </button>
+                </ion-input>
+                <ion-input #passwordEyeRegister  [type]="passwordTypeInput" [(ngModel)]="usuarioEditando.password" id="input" clearOnEdit="false" placeholder="Contraseña">
+                  <button  item-end  class="btn_eye_icon"  (click)="togglePasswordMode()">
+                    <ion-icon [name]="(passwordTypeInput === 'text')?'eye-off':'eye'"></ion-icon>
+                  </button>
+                </ion-input>
+                <ion-input [type]="passwordTypeInput2" [(ngModel)]="password2" id="input" placeholder="Repita la contraseña">
+                  <button  item-end  class="btn_eye_icon"  (click)="togglePasswordMode2()">
+                    <ion-icon [name]="(passwordTypeInput2 === 'text')?'eye-off':'eye'"></ion-icon>
+                  </button>
+                </ion-input>
+                <p id="mensaje"><b>{{mensaje}}</b></p>
+              <br>
+              <div id="check">
+                <ion-checkbox color="danger" [(ngModel)]="checkbox" disabled></ion-checkbox><ion-button (click)="politicas()" fill="clear" id="aceptar">Aceptar las Políticas</ion-button>
+              </div>
+              <div id="dlink">
+                <a routerLink="/login" id="link">Ya tengo cuenta</a>
+              </div>  
+              <div id="boton">
+                <ion-button fill="clear" (click)="clicBotonInsertar()" class="inicio">Registrarse</ion-button>
+              </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
